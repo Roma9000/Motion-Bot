@@ -16,8 +16,8 @@ from pathlib import Path
 
 # ─── НАЛАШТУВАННЯ ────────────────────────────────────────────────────────────
 
-TELEGRAM_BOT_TOKEN = "ВАШ_ТОКЕН_ТУТ"      # від @BotFather
-TELEGRAM_CHAT_ID   = "ВАШ_CHAT_ID_ТУТ"   # ваш особистий chat_id
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID   = os.environ.get("TELEGRAM_CHAT_ID", "")
 CHECK_INTERVAL     = 10 * 60               # кожні 10 хвилин (секунди)
 SEEN_FILE          = "seen_jobs.json"
 
